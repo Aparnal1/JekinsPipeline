@@ -24,12 +24,18 @@ pipeline {
     }
 
     stage('Deploy') {
+ Devlopment
        when
       {
         branch 'master'
       }
+=======
+     
+ master
+      
       parallel {
         stage('Deploy') {
+          
           steps {
             input 'Do you proceed with deployment?'
             echo 'Deploying app'
