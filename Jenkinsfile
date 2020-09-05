@@ -11,9 +11,13 @@ pipeline {
         }
 
         stage('Test') {
+          enviorment
+          {
+          localvar="Hello"
+          }
           steps {
             echo 'Testing the application'
-            writeFile(file: 'logtest.txt', text: "This automated log file ${chromdriverpath}")
+            writeFile(file: 'logtest.txt', text: "This automated log file ${chromdriverpath} and ${localvar}")
           }
         }
 
