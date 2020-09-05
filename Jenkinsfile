@@ -11,9 +11,8 @@ pipeline {
         }
 
         stage('Test') {
-          environment
-          {
-          localvar='Hello'
+          environment {
+            localvar = 'HelloNew'
           }
           steps {
             echo 'Testing the application'
@@ -25,9 +24,18 @@ pipeline {
     }
 
     stage('Deploy') {
+ Devlopment
+       when
+      {
+        branch 'master'
+      }
+=======
      
+ master
+      
       parallel {
         stage('Deploy') {
+          
           steps {
             input 'Do you proceed with deployment?'
             echo 'Deploying app'
