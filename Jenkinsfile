@@ -21,6 +21,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
+        input 'Do you proceed with deployment?'
         echo 'Deploying app'
       }
     }
