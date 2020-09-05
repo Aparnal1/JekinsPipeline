@@ -29,8 +29,7 @@ pipeline {
       {
         branch 'master'
       }
-=======
-     
+
  master
       
       parallel {
