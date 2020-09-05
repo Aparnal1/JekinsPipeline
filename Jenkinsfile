@@ -11,7 +11,7 @@ pipeline {
         }
 
         stage('Test') {
-          enviorment
+          enviroment
           {
           localvar="Hello"
           }
