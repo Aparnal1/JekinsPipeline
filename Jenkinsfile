@@ -11,9 +11,8 @@ pipeline {
         }
 
         stage('Test') {
-          environment
-          {
-          localvar='Hello'
+          environment {
+            localvar = 'Hello'
           }
           steps {
             echo 'Testing the application'
