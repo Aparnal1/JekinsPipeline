@@ -23,17 +23,14 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
- Devlopment
-       when
-      {
-        branch 'master'
-      }
-
- master
+  
       
       parallel {
         stage('Deploy') {
+           when
+      {
+        branch 'master'
+      }
           
           steps {
             input 'Do you proceed with deployment?'
