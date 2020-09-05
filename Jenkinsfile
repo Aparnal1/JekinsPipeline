@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'Building the java code operation'
+            echo '"Get path from $chromdriverpath"'
           }
         }
 
@@ -24,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    chromdriverpath = 'c:/'
   }
 }
