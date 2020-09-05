@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'Building the java code operation'
-            echo '"Get path from $chromdriverpath"'
+            echo '"Get path from ${chromdriverpath}"'
           }
         }
 
