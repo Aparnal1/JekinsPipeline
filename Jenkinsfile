@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Testing the application'
-            writeFile(file: 'logtest.txt', text: 'This automated log file')
+            writeFile(file: 'logtest.txt', text: 'This automated log file ${chromdriverpath}')
           }
         }
 
