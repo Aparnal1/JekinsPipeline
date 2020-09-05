@@ -26,7 +26,8 @@ pipeline {
   
       
       parallel {
-        stage('Deploy') {
+        stage('Deploy') 
+        {
            when
       {
         branch 'master'
@@ -50,5 +51,5 @@ pipeline {
   }
   environment {
     chromdriverpath = 'c:/'
-  }
+  
 }
