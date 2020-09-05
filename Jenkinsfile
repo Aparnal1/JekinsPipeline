@@ -21,9 +21,20 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        input 'Do you proceed with deployment?'
-        echo 'Deploying app'
+      parallel {
+        stage('Deploy') {
+          steps {
+            input 'Do you proceed with deployment?'
+            echo 'Deploying app'
+          }
+        }
+
+        stage('Artifcat') {
+          steps {
+            archiveArtifacts(artifacts: 'logtest.txt', allowEmptyArchive: true)
+          }
+        }
+
       }
     }
 
